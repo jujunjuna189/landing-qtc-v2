@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+@theme {
+  --color-primary-dark: #486281;
+  --color-primary-muted: #3C516A;
+  --color-primary-light: #6F89A7;
+  --color-secondary-dark: #EDA241;
+  --color-danger-dark: #E1372C;
+  --color-gray-dark: #DBDBDC;
+  --color-dark-dark: #404041;
+  --color-dark-muted: #504F50;
+  --color-white-light: #FFFFFF;
+  --color-white-muted: #EDEDED;
+
+  --animate-pulse-grow: pulse-grow 0.6s ease-in-out infinite;
+
+  @keyframes pulse-grow {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+      /* Sedikit membesar saja */
+    }
+  }
+}
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .custome-content li {
+    @apply list-disc mb-1 ml-6 text-sm text-gray-800;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .shadow-all {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+
+  /* Tambahkan ini di file .css kamu */
+
+  @keyframes slideLeft1 {
+    0% {
+      transform: translateX(150%);
+      opacity: 1;
+    }
+
+    90% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideLeft2 {
+    0% {
+      transform: translateX(150%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-200%);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-1 {
+    animation: slideLeft1 2s ease-in-out forwards;
+  }
+
+  .animate-slide-2 {
+    animation: slideLeft2 1.7s ease-in-out forwards;
+  }
+
+  @keyframes slideLeft1 {
+    0% {
+      transform: translateX(150%);
+      opacity: 1;
+    }
+
+    90% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideLeft2 {
+    0% {
+      transform: translateX(150%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-200%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-slide-1 {
+    animation: slideLeft1 2s ease-in-out;
+  }
+
+  .animate-slide-2 {
+    animation: slideLeft2 1.7s ease-in-out;
+  }
+
+  .animate-spin-slow {
+    animation: spin 90s linear infinite;
+  }
+
+
+  @media print {
+    .print-fill {
+      -webkit-print-color-adjust: exact;
+    }
+
+    .print-no-print {
+      display: none;
+    }
+
+    .print-pagebreak {
+      page-break-before: always;
+    }
+
+    .break-inside-avoid {
+      break-inside: avoid;
+    }
+
+    .print-no-padding {
+      padding: 0,
+    }
+
+    .print-no-margin {
+      margin: 0,
+    }
+
+    .print-no-border {
+      border: 0,
+    }
+  }
+}
