@@ -1,15 +1,15 @@
 <template>
     <div class="py-5 lg:py-10 relative px-5 lg:px-20">
         <div class="flex gap-2 items-center">
-            <span class="text-xl text-primary-dark font-semibold">Download assets</span>
+            <span class="text-sm lg:text-xl text-primary-dark font-semibold">Download assets</span>
         </div>
     </div>
     <div class="relative lg:flex lg:gap-20 px-5 lg:px-20">
         <div class="lg:w-72 lg:min-w-72 lg:max-w-72">
-            <span class="text-lg text-primary-dark font-semibold"> Available Category</span>
+            <span class="text-sm lg:text-lg text-primary-dark font-semibold"> Available Category</span>
             <ul class="mt-8">
-                <li class="pl-5 pr-20 py-2 hover:bg-gray-dark hover:text-primary-dark cursor-pointer font-semibold text-primary-dark" :class="{'bg-primary-dark !text-white-light': type == 'logo'}" @click="emit('refetch', {type: 'logo'})">Logo</li>
-                <li class="pl-5 pr-20 py-2 hover:bg-gray-dark hover:text-primary-dark cursor-pointer font-semibold text-primary-dark" :class="{'bg-primary-dark !text-white-light': type == 'company-profile'}" @click="emit('refetch', {type: 'company-profile'})">Company Profile</li>
+                <li class="pl-5 pr-20 py-2 text-sm lg:text-base hover:bg-gray-dark hover:text-primary-dark cursor-pointer font-semibold text-primary-dark" :class="{'bg-primary-dark !text-white-light': type == 'logo'}" @click="emit('refetch', {type: 'logo'})">Logo</li>
+                <li class="pl-5 pr-20 py-2 text-sm lg:text-base hover:bg-gray-dark hover:text-primary-dark cursor-pointer font-semibold text-primary-dark" :class="{'bg-primary-dark !text-white-light': type == 'company-profile'}" @click="emit('refetch', {type: 'company-profile'})">Company Profile</li>
             </ul>
         </div>
         <div class="bg-primary-dark h-[1px] block lg:hidden"/>
@@ -31,7 +31,7 @@
                         <span class="text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" class="text-primary-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
                         </span>
-                        <span class="text-primary-dark font-medium">Download</span>
+                        <span class="text-sm lg:text-base text-primary-dark font-medium">Download</span>
                     </div>
                 </div>
             </div>

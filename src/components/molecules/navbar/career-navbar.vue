@@ -1,13 +1,14 @@
 <template>
   <div
-    class="lg:fixed lg:top-0 lg:right-0 w-full lg:w-[80%] lg:h-[100vh] lg:bg-[#052446]/75 z-10 overflow-hidden lg:pt-5"
+    class="lg:fixed lg:top-0 lg:right-0 w-full lg:w-[80%] lg:h-[100vh] lg:bg-[#052446]/75 z-10 overflow-hidden lg:pt-5 relative"
   >
+    <SpiralAnimate :width="800" :height="800" :scale="800" :positionX="400" :positionY="-250" color="oklch(96.8% 0.007 247.896)" :style="{right: 0, top: 0}" />
     <div
       class="pl-5 lg:pl-[4.5rem] pr-5 lg:pr-[4.5rem] text-primary-dark lg:text-white-light lg:flex lg:justify-between lg:mt-28"
     >
       <ul>
         <li
-          class="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold lg:text-xl whitespace-pre"
+          class="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-sm lg:text-xl whitespace-pre"
           @click="router.push(RouterName.career)"
           @mouseover="hoverText = language[7.1]"
           @mouseleave="hoverText = '-'"
@@ -15,7 +16,7 @@
           {{ language[7.1] }}
         </li>
         <li
-          class="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold lg:text-xl whitespace-pre"
+          class="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-sm lg:text-xl whitespace-pre"
           @click="router.push(RouterName.careerList)"
           @mouseover="hoverText = language[7.2]"
           @mouseleave="hoverText = '-'"
@@ -23,7 +24,7 @@
           {{ language[7.2] }}
         </li>
         <li
-          class="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold lg:text-xl whitespace-pre"
+          class="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-sm lg:text-xl whitespace-pre"
           @click="router.push(RouterName.careerExplore)"
           @mouseover="hoverText = language[7.3]"
           @mouseleave="hoverText = '-'"
@@ -54,6 +55,7 @@ import landingLanguage from '../../../utils/language/landing-language';
 import { RouterName } from '../../../routes/router-name';
 import { getLocalLanguage } from '../../../utils/storage/local-storage';
 import asset from '../../../assets/assets';
+import SpiralAnimate from '../animate/spiral-animate.vue';
 
 const router = useRouter();
 const language = landingLanguage[getLocalLanguage().key]['navbar'];

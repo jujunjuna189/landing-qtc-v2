@@ -1,16 +1,16 @@
 <template>
     <div class="bg-dark-dark py-10 px-5 lg:px-20">
             <div class="lg:flex lg:justify-between ">
-                <ul class="lg:flex lg:gap-7 lg:grow lg:items-center">
+                <ul class="flex flex-col lg:flex-row gap-3 lg:gap-7 lg:grow lg:items-center">
                     <router-link v-for="(item, i) in menuData" :key="`menu-${i}`" :to="item.path"
-                        class="text-white-light text-[15px] cursor-pointer" active-class="font-normal uppercase"
+                        class="text-white-light text-sm lg:text-[15px] cursor-pointer" active-class="font-normal uppercase"
                         exact-active-class="font-normal uppercase">
                         <li>{{ item.name }}</li>
                     </router-link>
                 </ul>
                 <ul class="mt-5 lg:mt-0 flex gap-7 justify-end items-center">
-                    <li class="text-white-light text-[15px] cursor-pointer font-medium">News Update</li>
-                    <li class="text-white-light text-[15px] cursor-pointer font-medium">Press Release and Resources</li>
+                    <li class="text-white-light text-sm lg:text-[15px] cursor-pointer font-medium">News Update</li>
+                    <li class="text-white-light text-sm lg:text-[15px] cursor-pointer font-medium">Press Release and Resources</li>
                 </ul>
             </div>
             <hr class="my-3 border-dark-muted" />

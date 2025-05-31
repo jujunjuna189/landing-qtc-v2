@@ -2,19 +2,19 @@
     <div class="py-5 lg:py-20 relative">
         <div class="lg:flex lg:flex-col px-5 lg:px-32 mt-5 lg:mt-12">
             <div class="lg:w-[50%] text-justify">
-                <span class="text-primary-dark">
+                <span class="text-sm lg:text-base text-primary-dark">
                     {{language[3]}}
                 </span>
             </div>
             <div class="lg:w-[50%] mt-5 lg:mt-10">
-                <span class="text-primary-dark">
+                <span class="text-sm lg:text-base text-primary-dark">
                     {{language[4]}}
                 </span>
             </div>
         </div>
         <div class="lg:flex lg:gap-3 mt-5 lg:mt-16 px-5 lg:px-32" @click="router.push(RouterName.careerExplore)">
             <div class="border border-primary-dark bg-primary-dark flex flex-col justify-center items-center py-2 px-5 cursor-pointer">
-                <i class="text-white-light font-semibold text-center">
+                <i class="text-sm lg:text-base text-white-light font-semibold text-center">
                     {{language[5]}}
                 </i>
             </div>

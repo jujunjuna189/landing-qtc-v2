@@ -3,14 +3,14 @@
     <div class="relative lg:flex lg:gap-20 px-5 lg:px-20 lg:h-[20vh] lg:justify-center lg:items-center">
         <div class="border border-primary-dark lg:flex">
             <div class="grow flex flex-col justify-center px-3 lg:px-0 py-3 lg:py-0 lg:pl-10 lg:pr-60">
-                <span class="font-medium text-primary-dark">{{language[3]}}</span>
+                <span class="text-sm lg:text-base font-medium text-primary-dark">{{language[3]}}</span>
                 <div class="mt-2 lg:mt-5">
                     <input type="text" :placeholder="language[4]" class="border-none focus:outline-none placeholder:text-primary-dark text-primary-dark" value="" />
                 </div>
             </div>
             <div class="border-t lg:border-l border-primary-dark lg:my-5" />
             <div class="flex flex-col justify-center px-3 lg:px-0 py-3 lg:py-0 lg:pl-10 lg:pr-20">
-                <span class="font-medium text-primary-dark">{{language[5]}}</span>
+                <span class="text-sm lg:text-base font-medium text-primary-dark">{{language[5]}}</span>
                 <div class="mt-2 lg:mt-5">
                     <input type="text" :placeholder="language[6]" class="border-none focus:outline-none placeholder:text-primary-dark text-primary-dark" value="" />
                 </div>
@@ -53,7 +53,7 @@
     <div class=""></div>
     <div class="flex justify-center mt-7">
         <div class="cursor-pointer" @click="isVisibility = false">
-            <span class="font-bold text-primary-dark">{{language[7]}} ({{career.length}})</span>
+            <span class="font-bold text-primary-dark text-sm lg:text-base">{{language[7]}} ({{career.length}})</span>
         </div>
     </div>
     <div class="my-32" />

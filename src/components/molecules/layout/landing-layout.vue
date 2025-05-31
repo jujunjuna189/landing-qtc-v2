@@ -2,7 +2,9 @@
     <LogoLoader v-if="isLoader != undefined" :isLoader="isLoader" />
     <div class="antialiased">
         <Navbar :scrollAnimation="scrollAnimation" :class_cs="class_nav" />
-        <slot></slot>
+        <div class="overflow-hidden">
+            <slot></slot>
+        </div>
     </div>
     <Footer />
 </template>

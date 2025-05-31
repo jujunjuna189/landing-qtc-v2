@@ -14,16 +14,16 @@
             <Slide v-for="slide in 2" :key="slide">
                 <div>
                     <div class="absolute top-0 bottom-0 left-0 right-0">
-                        <img :src="assets[3]" alt="Image5" class="object-cover object-bottom h-[50vh] lg:h-full w-full animate-fade animate-duration-400" loading="eager" />
+                        <img :src="assets[3]" alt="Image5" class="object-cover object-bottom h-[75vh] lg:h-full w-full animate-fade animate-duration-400" loading="eager" />
                     </div>
                     <div class="py-28 relative">
                         <div class="px-5 lg:px-32">
-                            <span class="text-xl lg:text-2xl text-primary-dark font-medium cursor-pointer" >{{language[10]}}</span>
+                            <span class="text-base lg:text-2xl text-primary-dark font-medium cursor-pointer" >{{language[10]}}</span>
                             <div class="w-12 h-1 bg-secondary-dark" />
                         </div>
                         <div class="flex flex-col px-5 lg:px-36 mt-5 lg:mt-12">
                             <div class="lg:w-[50%]">
-                                <span class="text-primary-dark font-medium">
+                                <span class="text-sm lg:text-base text-primary-dark font-medium">
                                     {{language[11]}}
                                 </span>
                             </div>

@@ -1,12 +1,12 @@
 <template>
     <div class="bg-gray-dark py-10 lg:py-20 relative">
         <div class="px-5 lg:px-32">
-            <span class="text-xl lg:text-2xl text-primary-dark font-medium">{{language[8]}}</span>
+            <span class="text-base lg:text-2xl text-primary-dark font-medium">{{language[8]}}</span>
             <div class="w-12 h-1 bg-secondary-dark" />
         </div>
         <div class="flex flex-col px-5 lg:px-36 mt-5 lg:mt-12">
             <div class="lg:w-[60%]">
-                <span class="text-primary-dark font-medium">
+                <span class="text-sm lg:text-base text-primary-dark font-medium">
                     {{language[9]}}
                 </span>
             </div>
@@ -21,6 +21,7 @@
                         <Slide v-for="(item, i) in items" :key="i">
                         <div
                             class="text-primary-dark cursor-pointer leading-2"
+                            @click="router.push(item.path)"
                         >
                             <!-- Gambar -->
                             <div class="mb-2 lg:mb-4 flex justify-center">
@@ -57,8 +58,11 @@ import { Carousel, Slide } from 'vue3-carousel';
 import asset from '../../../../assets/assets';
 import { ref } from 'vue';
 import { getLocalLanguage } from '../../../../utils/storage/local-storage';
+import { useRouter } from 'vue-router';
 
 const language = landingLanguage[getLocalLanguage().key][RouterName.main];
+
+const router = useRouter();
 
 const carouselRef = ref()
 const currentSlide = ref(1)
@@ -100,57 +104,57 @@ export interface SlideItemIF {
 const items = ref<SlideItemIF[]>([
     {
         name: "Capital Investment",
-        path: "/",
+        path: RouterName.capitalInvestment,
         icon: asset.ic1,
     },
     {
         name: "EPC",
-        path: "/",
+        path: RouterName.epc,
         icon: asset.ic2,
     },
     {
         name: "Renewable Energy",
-        path: "/",
+        path: RouterName.renewableEnergy,
         icon: asset.ic3,
     },
     {
         name: "Industrial",
-        path: "/",
+        path: RouterName.industrial,
         icon: asset.ic4,
     },
     {
         name: "Integrated Telecomunication",
-        path: "/",
+        path: RouterName.integratedTelecomunication,
         icon: asset.ic5,
     },
     {
         name: "Real Estate & Property",
-        path: "/",
+        path: RouterName.realEstateProperty,
         icon: asset.ic6,
     },
     {
         name: "Developer",
-        path: "/",
+        path: RouterName.developer,
         icon: asset.ic7,
     },
     {
         name: "Research and Development",
-        path: "/",
+        path: RouterName.researchDevelopment,
         icon: asset.ic8,
     },
     {
         name: "Business Compliance and Legal Advisory",
-        path: "/",
+        path: RouterName.legal,
         icon: asset.ic9,
     },
     {
         name: "Asset Management",
-        path: "/",
+        path: RouterName.assetManagement,
         icon: asset.ic10,
     },
     {
         name: "Supply Chain",
-        path: "/",
+        path: RouterName.supplyChain,
         icon: asset.ic11,
     },
 ]);

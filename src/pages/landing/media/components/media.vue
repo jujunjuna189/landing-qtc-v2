@@ -1,14 +1,14 @@
 <template>
     <div class="py-5 lg:py-20 relative">
-        <img :src="asset.ptCircle" alt="PattrenQTCDesign" class="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[60%] opacity-10 " />
+        <SpiralAnimate :width="800" :height="350" :scale="800" :positionX="400" :positionY="-150" :style="{right: 0, top: 0}" />
         <div class="px-5 lg:px-32">
-            <span class="text-xl lg:text-2xl text-primary-dark font-semibold">{{language[2]}}</span>
+            <span class="text-base lg:text-2xl text-primary-dark font-semibold">{{language[2]}}</span>
             <div class="w-12 h-1 bg-secondary-dark" />
         </div>
         <div class="px-5 lg:px-32 mt-5 lg:mt-16">
             <div class="lg:flex lg:justify-between lg:items-center bg-gray-dark">
                 <div class="px-5 pt-2 lg:pt-0 lg:py-0 lg:px-9">
-                    <span class="text-dark-muted text-opacity-50 font-medium">
+                    <span class="text-sm lg:text-base text-dark-muted text-opacity-50 font-medium">
                         {{language[3]}}
                     </span>
                 </div>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="bg-primary-dark px-10 py-3 text-center cursor-pointer">
-                        <span class="uppercase text-white-light">
+                        <span class="text-sm lg:text-base uppercase text-white-light">
                             {{language[7]}}
                         </span>
                     </div>
@@ -77,6 +77,7 @@ import landingLanguage from '../../../../utils/language/landing-language';
 import { MediaIF, PaginationIF } from '../media.vue';
 import { getLocalLanguage } from '../../../../utils/storage/local-storage';
 import asset from '../../../../assets/assets';
+import SpiralAnimate from '../../../../components/molecules/animate/spiral-animate.vue';
 
 defineProps<{
     media: MediaIF[],

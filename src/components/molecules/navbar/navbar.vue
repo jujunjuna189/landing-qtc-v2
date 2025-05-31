@@ -10,7 +10,7 @@
                 <nav class="hidden lg:block">
                     <ul class="flex justify-center space-x-10 list-none">
                         <router-link v-for="(item, i) in menuData" :key="`menu-${i}`" :to="item.path"
-                            class="text-[15px] cursor-pointer hover:font-semibold text-primary-dark" :class="[
+                            class="lg:text-[15px] cursor-pointer hover:font-semibold text-primary-dark" :class="[
                                 $route.path === item.path ? 'text-primary font-bold' : 'text-secondary',
                                 {'text-white': isHover},
                             ]" active-class="font-semibold"

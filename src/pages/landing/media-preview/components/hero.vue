@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <img :src="asset.ptCircle" alt="PattrenQTCDesign" class="animate-spin-slow absolute -top-[10rem] -right-[20rem] w-[60%] opacity-10 " />
+        <SpiralAnimate :width="1000" :height="1000" :scale="1000" :positionX="530" :positionY="-230" color="oklch(98.4% 0.003 247.858)" :style="{right: 0, top: 0}" />
         <div class="w-full pt-28 pb-16 flex justify-start items-center px-20 bg-primary-dark">
             <div class="grow flex justify-between">
                 <div class="grow flex flex-col gap-1 text-start mt-20">
@@ -24,6 +24,7 @@
 
 <script setup lang="ts">
 import asset from '../../../../assets/assets';
+import SpiralAnimate from '../../../../components/molecules/animate/spiral-animate.vue';
 
 
 </script>
