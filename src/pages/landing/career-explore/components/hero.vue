@@ -1,5 +1,5 @@
 <template>
-    <div class="relative">
+    <div class="relative overflow-hidden">
         <SpiralAnimate :width="900" :height="900" :scale="900" :positionX="400" :positionY="-50" color="oklch(96.8% 0.007 247.896)" :style="{right: 0, top: 0}" />
         <div class="w-full pt-5 lg:pt-28 pb-5 lg:pb-16 flex justify-start items-center px-5 lg:px-20 bg-primary-dark">
             <div class="grow flex flex-col gap-1 text-start lg:mt-10">
