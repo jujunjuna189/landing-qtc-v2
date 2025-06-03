@@ -27,6 +27,7 @@ const getAsset = (): void => {
 }
 
 export interface BusinessIF{
+    id: number,
     logo: string,
     name: string,
 }

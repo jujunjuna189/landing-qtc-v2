@@ -1,5 +1,5 @@
 <template>
-    <div ref="navbarRef" class="fixed top-0 left-0 right-0 transition-all duration-300 z-10" :class="[class_cs]">
+    <div ref="navbarRef" class="fixed top-0 left-0 right-0 transition-all duration-300 z-20" :class="[class_cs]">
         <div class="flex items-center bg-transparent">
             <div class="flex gap-5 items-center lg:px-12 justify-center py-5">
                 <div class="cursor-pointer relative">

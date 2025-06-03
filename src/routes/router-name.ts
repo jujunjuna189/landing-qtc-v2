@@ -14,6 +14,7 @@ export const RouterName = {
     assetManagement: '/our-impact/asset-management',
     supplyChain: '/our-impact/supply-chain',
     businessHightlights: '/business-hightlights',
+    businessHightlightsDetail: '/business-hightlights/detail',
     businessPreview: '/business-hightlights/preview',
     sustainability: '/sustainability',
     sustainabilityCommitment: '/sustainability/commitment',

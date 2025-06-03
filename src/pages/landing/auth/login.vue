@@ -25,13 +25,7 @@
         <!-- Username / Email -->
         <div class="mt-3">
           <label class="block mb-1">Username/Email</label>
-          <TextField
-            id="email"
-            placeholder="..."
-            :error="error.email"
-            v-model="controller.email"
-            @input="(value) => controller.email = value"
-          />
+          <EmailField :value="controller.email"  @input="value => controller.email = value" />
         </div>
 
         <!-- Password -->
@@ -75,6 +69,7 @@ import PasswordField from '../../../components/atoms/field/password-field.vue';
 import CircleLoader from '../../../components/atoms/loader/circle-loader.vue';
 import { RouterName } from '../../../routes/router-name';
 import { setLocalUser } from '../../../utils/storage/local-storage';
+import EmailField from '../../../components/atoms/field/email-field.vue';
 
 // --- state ---
 const router = useRouter();

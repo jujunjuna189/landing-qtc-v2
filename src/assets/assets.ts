@@ -15,6 +15,7 @@ import imgSustainability from "./image/Sustainability.webp";
 import imgMedia from "./image/Media.webp";
 import imgCarrer from "./image/Carrer.webp";
 
+import img6 from "./image/img6.webp";
 import img7 from "./image/img7.webp";
 
 import lgLogo from './logo/logo.png'
@@ -95,6 +96,7 @@ const asset = {
     imgSustainability,
     imgMedia,
     imgCarrer,
+    img6,
     img7,
     lgLogo,
     lgLogoGif,

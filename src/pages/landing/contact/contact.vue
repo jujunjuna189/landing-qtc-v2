@@ -1,7 +1,7 @@
 <template>
-    <LandingLayout class_nav="!sticky bg-white" :isLoader="isLoader">
+    <LandingLayout class_nav="!sticky bg-white" :isLoader="isLoader" :loader="loader">
         <Hero :assets="assets"/>
-        <Contact/>
+        <Contact @loader="(value) => loader = value"/>
         <Map/>
     </LandingLayout>
 </template>
@@ -17,6 +17,7 @@ import Map from './components/map.vue';
 const api = new useApi();
 const assets = ref<{}>({});
 const isLoader = ref<boolean>(true);
+const loader = ref<boolean>();
 
 const getAsset = (): void => {
     api.get(`asset?page=contact`).then((res) => {

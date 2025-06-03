@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <small v-if="error" class="text-red-800 pl-1">{{ error }}</small>
+    <small v-if="error" class="text-danger-dark pl-1">{{ error }}</small>
   </div>
 </template>
 

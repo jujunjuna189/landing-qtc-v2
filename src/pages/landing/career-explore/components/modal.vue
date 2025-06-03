@@ -64,6 +64,7 @@
 import { ref, onMounted, onBeforeUnmount, computed, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { quillConverse } from '../../../../utils/converse/quill-converse';
+import { RouterName } from '../../../../routes/router-name';
 
 const props = defineProps({
   item: Object
@@ -108,10 +109,8 @@ watch(isVisible, (visible) => {
 });
 
 const applyNow = () => {
-  router.push({
-    name: 'career-form', // Pastikan route name sesuai
-    state: { career_id: props.item?.id }
-  });
+  isVisible.value = false;
+  router.push(`${RouterName.careerForm}/${props.item?.id}`);
 };
 
 const jobDetails = computed(() => ({

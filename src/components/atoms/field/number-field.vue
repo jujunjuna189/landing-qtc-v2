@@ -1,15 +1,14 @@
 <template>
   <div>
-    <textarea
+    <input
+      type="number"
       :name="id"
       :id="id"
-      :value="value"
       class="border border-primary-dark px-3 py-2 w-full focus:outline-none"
-      autocomplete="false"
+      autocomplete="off"
       :placeholder="placeholder"
-      rows="10"
       @input="handleInput"
-    ></textarea>
+    />
     <small v-if="error" class="text-danger-dark mt-1 block">{{ error }}</small>
   </div>
 </template>
@@ -17,7 +16,6 @@
 <script setup lang="ts">
 interface PropsIF {
   id?: string;
-  value?: string;
   placeholder?: string;
   class_cs?: string;
   error?: string;
@@ -30,7 +28,7 @@ const emit = defineEmits<{
 }>();
 
 function handleInput(event: Event) {
-  const target = event.target as HTMLTextAreaElement;
+  const target = event.target as HTMLInputElement;
   emit('input', target.value);
 }
 </script>

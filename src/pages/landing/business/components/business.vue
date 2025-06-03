@@ -31,10 +31,10 @@
                 </div>
             </div>
         </div>
-        <div class="my-8 lg:my-0 lg:pr-20 lg:w-[25rem] lg:max-w-[25rem] lg:min-w-[25rem]">
+        <div class="my-8 lg:my-0 lg:pr-20 lg:w-[25rem] lg:max-w-[25rem] lg:min-w-[25rem] relative z-10">
             <div class="grid grid-cols-2 lg:flex lg:flex-col gap-5 lg:gap-10">
                 <div v-for="(item, i) in business" :key="i">
-                    <div class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:gap-3 cursor-pointer">
+                    <div class="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:gap-3 cursor-pointer" @click="router.push(`${RouterName.businessHightlightsDetail}/${item.id}`)">
                         <div class="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark bg-white-light overflow-hidden">
                             <img :src="item.logo" :alt="item.name" class="w-full h-full rounded-full" />
                         </div>
@@ -49,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-import asset from '../../../../assets/assets';
+import { useRouter } from 'vue-router';
 import SpiralAnimate from '../../../../components/molecules/animate/spiral-animate.vue';
 import { RouterName } from '../../../../routes/router-name';
 import landingLanguage from '../../../../utils/language/landing-language';
@@ -61,5 +61,6 @@ defineProps<{
     business: BusinessIF[],
 }>()
 
+const router = useRouter();
 const language = landingLanguage[getLocalLanguage().key][RouterName.businessHightlights];
 </script>

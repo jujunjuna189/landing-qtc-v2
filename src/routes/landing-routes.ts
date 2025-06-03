@@ -153,6 +153,16 @@ const landingRoutes: Array<RouteRecordRaw> = [
         }
     },
     {
+        path: `${RouterName.businessHightlightsDetail}/:id`,
+        name: "business/detail",
+        component: () => import("../pages/landing/business-detail/business-detail.vue"),
+        meta: {
+            requiresAuth: false,
+            title: "",
+            description: ""
+        }
+    },
+    {
         path: RouterName.sustainability,
         name: "sustainability",
         component: () => import("../pages/landing/sustainability/sustainability.vue"),
@@ -256,6 +266,17 @@ const landingRoutes: Array<RouteRecordRaw> = [
         path: RouterName.careerExplore,
         name: "career/explore",
         component: () => import("../pages/landing/career-explore/career.vue"),
+        meta: {
+            requiresAuth: false,
+            title: "",
+            description: ""
+        }
+    },
+
+    {
+        path: `${RouterName.careerForm}/:id`,
+        name: "career/form",
+        component: () => import("../pages/landing/career-apply/career-apply.vue"),
         meta: {
             requiresAuth: false,
             title: "",
