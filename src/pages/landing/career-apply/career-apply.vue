@@ -1,7 +1,7 @@
 <template>
   <LandingLayout class_nav="!sticky bg-white" :loader="isLoader">
-    <div class="flex justify-center pt-10 pb-32">
-      <div class="w-[30%]">
+    <div class="lg:flex lg:justify-center px-5 lg:px-0 pt-10 pb-32">
+      <div class="lg:w-[30%]">
         <!-- Header -->
         <div class="flex flex-col">
           <span class="font-semibold uppercase text-primary-dark">Import Your Profile</span>

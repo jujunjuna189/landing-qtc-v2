@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="flex justify-center">
+    <div :class="`flex justify-center relative ${isVisibility ? 'z-20' : 'z-10'}`">
         <div class="mt-10 mb-5 w-[60rem] transition-all duration-300" :class="{'hidden': isVisibility}">
             <div v-for="(item, i) in career" :key="i">
                 <Modal :item="item">
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class=""></div>
-    <div class="flex justify-center mt-7">
+    <div class="flex justify-center mt-7 relative z-[1]">
         <div class="cursor-pointer" @click="isVisibility = false">
             <span class="font-bold text-primary-dark text-sm lg:text-base">{{language[7]}} ({{career.length}})</span>
         </div>
