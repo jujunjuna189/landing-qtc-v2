@@ -1,5 +1,5 @@
 <template>
-    <div class="grow py-20 px-32">
+    <div class="grow py-5 lg:py-20 px-5 lg:px-32">
         <div class="flex justify-between items-center">
             <div class="flex items-center gap-1 text-sm cursor-pointer">
                 <span class="text-sm">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="mt-10">
-            <div class="mt-3 font-medium" :style="{ display: 'flex', whiteSpace: 'pre-wrap' }" v-html="news?.content" />
+            <div class="mt-3 font-medium text-sm lg:text-base" :style="{ display: 'flex', whiteSpace: 'pre-wrap' }" v-html="news?.content" />
         </div>
         <div class="mt-10 flex gap-2 items-center text-primary-dark font-semibold cursor-pointer" @click="router.back()">
             <span>
@@ -25,7 +25,7 @@
             <span>Go back to Press Releases</span>
         </div>
     </div>
-    <div class="my-40" />
+    <div class="my-5 lg:my-40" />
 </template>
 
 <script setup lang="ts">

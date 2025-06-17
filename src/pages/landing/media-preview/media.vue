@@ -1,6 +1,6 @@
 <template>
     <LandingLayout class_nav="!sticky bg-white">
-        <Hero/>
+        <Hero :news="news"/>
         <Preview :news="news"/>
     </LandingLayout>
 </template>
@@ -24,6 +24,7 @@ export interface NewsIf {
     title: string,
     content: string,
     redirect: string,
+    date: string,
 }
 
 const getNews = (): void => {
